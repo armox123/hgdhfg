@@ -5,7 +5,9 @@ let products = [
         "id":1,
         "name": "potato",
         "discription": "Описание товара potato",
-        "full-discription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis dolores libero atque placeat adipisci nesciunt necessitatibus, repellat dignissimos suscipit? Necessitatibus quisquam voluptatibus ad ducimus vitae quae, praesentium hic perspiciatis?",
+        "full-discription": "Карто́фель, или паслён клубнено́сный (лат. Solánum tuberósum), — вид многолетних клубненосных травянистых растений из рода Паслён (Solanum) семейства Паслёновые (Solanaceae). Клубни картофеля являются важным пищевым продуктом. Плоды ядовиты в связи с содержанием в них соланина. С потребительской точки зрения картофель является овощем.",
+        "image": "/images/potato.webp",
+        "filtr": "vegetables",
         "price": 123,
     },
     {
@@ -13,6 +15,7 @@ let products = [
         "name": "carrot",
         "discription": "Описание товара carrot",
         "full-discription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis dolores libero atque placeat adipisci nesciunt necessitatibus, repellat dignissimos suscipit? Necessitatibus quisquam voluptatibus ad ducimus vitae quae, praesentium hic perspiciatis?",
+        "filtr": "vegetables",
         "price": 250,
     },
     {
@@ -20,6 +23,7 @@ let products = [
         "name": "apple",
         "discription": "Описание товара apple",
         "full-discription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis dolores libero atque placeat adipisci nesciunt necessitatibus, repellat dignissimos suscipit? Necessitatibus quisquam voluptatibus ad ducimus vitae quae, praesentium hic perspiciatis?",
+        "filtr": "fruit",
         "price": 540,
     },
     {
@@ -27,10 +31,26 @@ let products = [
         "name": "chicken",
         "discription": "Описание товара chicken",
         "full-discription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis dolores libero atque placeat adipisci nesciunt necessitatibus, repellat dignissimos suscipit? Necessitatibus quisquam voluptatibus ad ducimus vitae quae, praesentium hic perspiciatis?",
+        "filtr": "meat",
         "price": 350,
     },
-]
-const fullProduct = document.querySelector("#full-product") 
+    {
+        "id":5,
+        "name": "beef",
+        "discription": "Описание товара beef",
+        "full-discription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis dolores libero atque placeat adipisci nesciunt necessitatibus, repellat dignissimos suscipit? Necessitatibus quisquam voluptatibus ad ducimus vitae quae, praesentium hic perspiciatis?",
+        "filtr": "meat",
+        "price": 450,
+    },
+    {
+        "id":6,
+        "name": "codfish",
+        "discription": "Описание товара codfish",
+        "full-discription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis omnis dolores libero atque placeat adipisci nesciunt necessitatibus, repellat dignissimos suscipit? Necessitatibus quisquam voluptatibus ad ducimus vitae quae, praesentium hic perspiciatis?",
+        "filtr": "fish",
+        "price": 600,
+    },
+] 
 const content = document.querySelector("#content");
 for (const product of products) {
     content.innerHTML += 
@@ -41,11 +61,5 @@ for (const product of products) {
         <button>Добавить в корзину</button>
     </div>`;
 }
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get('id');
-for (const trueproduct of products) {
-    if(trueproduct.id == id){
-        fullProduct.innerHTML += `${trueproduct.name}`;
-    }
-}
+
 
