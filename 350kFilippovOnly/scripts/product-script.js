@@ -12,5 +12,5 @@ for (const product of products) {
 }
 
 fullProduct.innerHTML = `<h1>${targetProduct.name}</h1>
-<img src='${targetProduct.image}' alt='Картинка не загрузилась :<'>;
-<p>${targetProduct["full-discription"]}<p>`
+<img src='${targetProduct.image}' alt='Картинка не загрузилась :<' width=500px>;
+<p>${targetProduct.fullDiscription}<p>`
