@@ -1,7 +1,10 @@
 .cardImg{
     align-items: center;
     border-radius: 10px;
+    object-fit: cover;
     width:80%;
+    height: 140px;
+    
 }
 #content{
     display: flex;
@@ -9,10 +12,12 @@
     flex-wrap: wrap;
     gap:20px;
     justify-content: center;
-    
+    max-width: 1300px;
+    margin: 0 auto; 
 }
 .card{
     display: flex;
+    gap:5px;
     flex-direction: column;
     width:200px;
     background-color: rgb(229, 229, 229);
@@ -29,6 +34,9 @@
 }
 #filtrs{
     display: flex;
+    position: absolute;
+    left: 20px;     
+    top: 20px;          
     align-items: flex-start; 
     flex-direction: column;
     width:100px;
@@ -37,10 +45,42 @@
     padding: 20px;
 }
 .filtr-div{
+    display: flex;
+    white-space: nowrap;
     justify-content: left;
 }
 #main-content{
     display: flex;
     gap:20px;
+    justify-content: center; 
+    align-items: flex-start;
     padding: 20px;
+    position: relative;
+    padding-left:0%;
+}
+#filtr-btn img{
+    left: 20px;
+    top: 20px;
+    height: 30px;
+    width: 30px;
+}
+@media(max-width: 1024px){
+    #main-content{
+        flex-direction: column;
+    }
+    #filtrs{
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 20px;
+        width: auto;              
+        background-color: rgb(160, 160, 160);
+    }
+    #main-content{
+        align-items: center;
+    }
+    #content{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
