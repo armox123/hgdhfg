@@ -86,15 +86,36 @@ function generate(flt, srch){
         
     }
 }
+//поиск
 const searchText = document.querySelector('#card-search')
 searchText.addEventListener('input', function(){
     query = searchText.value.toLowerCase();
     generate(lastFlt, query)
 })
-const filtr = document.querySelectorAll("input")
+//фильтры
+const filtr = document.querySelectorAll(".filtr");
 for (const elem of filtr) {
     elem.addEventListener('change', function(changed){
         generate(changed.target.id, query);
     })
 }
-generate('all', "");
+//сортировка
+const sort = document.querySelectorAll(".sort");
+for (const elem of sort){
+    elem.addEventListener('change', function(changed){
+            if(changed.target.id == "alphabet-inc"){
+                products.sort((a, b) => a.name.localeCompare(b.name));
+            }
+            else if(changed.target.id == "alphabet-des"){
+                products.sort((a, b) => b.name.localeCompare(a.name));
+            }
+            else if(changed.target.id == "price-inc"){
+                products.sort((a, b) => a.price - b.price);
+            }
+            else if(changed.target.id == "price-des"){
+                products.sort((a, b) => b.price - a.price);
+            }
+        generate(lastFlt, query);
+    })
+}
+generate('all', "");//вызов функции что бы появились карточки

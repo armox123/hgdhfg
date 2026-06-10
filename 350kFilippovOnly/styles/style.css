@@ -64,11 +64,31 @@
     height: 30px;
     width: 30px;
 }
+#sort-block{
+    display: flex;
+    position: absolute;
+    right: 20px;     
+    top: 20px;          
+    align-items: flex-start; 
+    flex-direction: column;
+    width:100px;
+    border-radius: 10px;
+    background-color: rgb(160, 160, 160);
+    padding: 20px;
+}
 @media(max-width: 1024px){
     #main-content{
         flex-direction: column;
     }
     #filtrs{
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 20px;
+        width: auto;              
+        background-color: rgb(160, 160, 160);
+    }
+    #sort-block{
         position: static;
         flex-direction: row;
         align-items: center;

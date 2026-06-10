@@ -9,27 +9,47 @@
 <body>
     <button id="filtr-btn"><img src="images/icon-menu.png" alt=""></button>
     <input id="card-search" type="search" placeholder="что ищем?">
+    <div id="right-panel">
+    </div>
     <div id="main-content">
+        <div id="sort-block">  
+            <div id="sort-div">
+                <input name="sort" type="radio" id="price-des" class="sort">
+                по цене убывание
+            </div>
+            <div id="sort-div">
+                <input name="sort" type="radio" id="price-inc" class="sort">
+                по цене возрастание
+            </div>
+            <div id="sort-div">
+                <input name="sort" type="radio" id="alphabet-inc" class="sort">
+                по алфавиту А-Я
+            </div>
+            <div id="sort-div">
+                <input name="sort" type="radio" id="alphabet-des" class="sort">
+                по алфавиту Я-А
+            </div>
+        </div>
         <div id="filtrs">
             <div class="filtr-div">
-            <input name="filtr" type="radio" id="vegetables">
-            овощи
+                <input name="filtr" type="radio" id="vegetables" class="filtr">
+                овощи
             </div>
             <div class="filtr-div">
-            <input name="filtr" type="radio" id="fruit">
-            фркуты
+                <input name="filtr" type="radio" id="fruit" class="filtr">
+                фркуты
             </div>
             <div class="filtr-div">
-            <input name="filtr" type="radio" id="meat">
-            мясо
+                <input name="filtr" type="radio" id="meat" class="filtr">
+                мясо
             </div>
             <div class="filtr-div">
-            <input name="filtr" type="radio" id="fish">
-            рыба
+                <input name="filtr" type="radio" id="fish" class="filtr">
+                рыба
             </div>
             <div class="filtr-div">
-            <input name="filtr" type="radio" id="all" checked>
-            всё
+                <input name="filtr" type="radio" id="all" class="filtr" checked>
+                всё
             </div>
         </div>
         <div id="content"></div>
