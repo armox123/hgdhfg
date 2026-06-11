@@ -86,6 +86,10 @@ function generate(flt, srch){
         
     }
 }
+const themeBtn = document.querySelector('#theme-btn');
+themeBtn.addEventListener('click', function(){
+    
+})
 //поиск
 const searchText = document.querySelector('#card-search')
 searchText.addEventListener('input', function(){
